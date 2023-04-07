@@ -11,8 +11,10 @@ main {
   padding: 0;
   margin: 0;
   /* font-family: "Lato", sans-serif; */
-  background: #1a181c;
-  scrollbar-color: #f3b66c rgb(31 41 55);
+  background: #1a191c;
+  /* background: #2b2915; */
+
+  scrollbar-color: #00abf0 rgb(31 41 55);
   scrollbar-width: thin;
 }
 
@@ -32,16 +34,19 @@ main::-webkit-scrollbar-thumb {
 main::-webkit-scrollbar-thumb:hover {
   background: #e4aa63;
 }
+input {
+  caret-color: #f3b66c;
+}
 @layer components {
   .social-links {
     @apply flex w-full cursor-pointer items-center justify-center gap-3  border-b-2 border-primary/10 px-3 py-5 
-    duration-100 ease-out hover:border-primary  dark:border-white/10 dark:hover:border-white md:w-auto md:px-8;
+    duration-100 ease-out  hover:border-white md:w-auto md:px-8;
   }
   .contact-label {
-    @apply block text-sm font-medium uppercase  dark:text-white md:text-sm my-2;
+    @apply block text-sm font-medium uppercase  text-white md:text-sm my-2;
   }
   .contact-input {
-    @apply w-full border-b-2 border-primary bg-transparent px-3 pb-2 border-r-0 border-t-0 border-l-0 dark:text-white focus:bg-transparent focus:outline-none;
+    @apply w-full border-b-2 border-primary bg-transparent px-3 pb-2 border-r-0 border-t-0 border-l-0 text-white focus:bg-transparent focus:outline-none;
   }
   .contact-error {
     @apply py-2  text-[#ef4444];
@@ -50,4 +55,17 @@ main::-webkit-scrollbar-thumb:hover {
 
 .disableScroll {
   height: calc(100vh - 280px);
+}
+@keyframes blink {
+  from,
+  to {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+}
+
+.cursor {
+  animation: blink 1s linear infinite forwards;
 }

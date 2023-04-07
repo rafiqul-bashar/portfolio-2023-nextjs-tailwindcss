@@ -14,9 +14,11 @@ module.exports = {
     extend: {
       colors: {
         primary: "#F3B66C",
+        // primary: "#00abf0",
       },
       rotate: {
         270: "270deg",
+        360: "360deg",
       },
     },
   },

@@ -1,7 +1,7 @@
 "use client";
 import Head from "next/head";
 import dynamic from "next/dynamic";
-import { Footer, Header, SocialLinksBar } from "@/components";
+import { Footer, Header, Landing, SocialLinksBar } from "@/components";
 import { useState } from "react";
 import { motion } from "framer-motion";
 const Contact = dynamic(() => import("@/components/sections/Contact"));
@@ -27,7 +27,7 @@ export default function Home() {
       </Head>
       <Header menuOpen={menuOpen} switchMenu={switchMenu} />
       <main
-        className={`homepage font-mono w-full h-[88vh] overflow-x-hidden overflow-y-auto md:flex items-center gap-20 justify-between  ${
+        className={`homepage font-mono w-full h-[88vh] text-white overflow-x-hidden overflow-y-auto md:flex items-center gap-20 justify-between  ${
           menuOpen ? "opacity-80 overflow-y-hidden relative" : ""
         }`}
       >
@@ -35,10 +35,11 @@ export default function Home() {
           <SocialLinksBar />
         </div>
         <div className=" h-[88vh] ml-auto ">
+          <Landing />
           <Services />
           <Projects />
           <Contact />
-          <Footer />
+          {/* <Footer /> */}
         </div>
       </main>
     </>

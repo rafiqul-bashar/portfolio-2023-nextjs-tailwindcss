@@ -64,4 +64,4 @@ export default function SocialLinksBar() {
 }
 let styles = {};
 styles.link =
-  "flex flex-col gap-3 border-2 border-primary/60 hover:border-primary/20 rounded-full p-2 transition-all duration-300 cursor-pointer";
+  "flex flex-col gap-3 border-2 border-primary/60 hover:border-primary/20 rounded-full p-2 transition-all duration-300 cursor-pointer hover:rotate-360 ";

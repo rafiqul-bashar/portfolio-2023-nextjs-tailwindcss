@@ -13,7 +13,7 @@ const links = [
 
 export default function Header({ menuOpen, switchMenu }) {
   return (
-    <header className="select-none px-4 md:px-4 bg-[#23252D] text-white  dark:text-primary ">
+    <header className="select-none px-4 md:px-4  text-white  ">
       <div className="container flex  items-center justify-between  text-md  mx-auto h-[12vh]">
         <Link href="/">
           <motion.div
@@ -39,7 +39,7 @@ export default function Header({ menuOpen, switchMenu }) {
             transition={{ duration: 0.1 }}
             className={styles.desktoplink}
           >
-            <Link href="/">Home</Link>
+            <Link href="/#/">Home</Link>
           </motion.li>
           <motion.li
             initial={{ y: -10, opacity: 0 }}
@@ -47,7 +47,7 @@ export default function Header({ menuOpen, switchMenu }) {
             transition={{ duration: 0.1, delay: 0.1 }}
             className={styles.desktoplink}
           >
-            <Link href="/#about">About</Link>
+            <Link href="/#services">Services</Link>
           </motion.li>
           <motion.li
             initial={{ y: -10, opacity: 0 }}
@@ -115,7 +115,7 @@ export default function Header({ menuOpen, switchMenu }) {
                 onClick={switchMenu}
                 className={styles.mobilelink}
               >
-                <Link href="/">
+                <Link href="/#/">
                   <span className="italic text-primary">{"/_ "}</span>
                   Home
                 </Link>
@@ -209,6 +209,6 @@ export default function Header({ menuOpen, switchMenu }) {
 
 let styles = {};
 styles.mobilelink =
-  "cursor-pointer border-b-[2px] border-transparent dark:text-white font-semibold tracking-wider hover:border-primary capitalize hover:text-primary ease-linear transition-all ml-4 ";
+  "cursor-pointer border-b-[2px] border-transparent  font-semibold tracking-wider hover:border-primary capitalize hover:text-primary ease-linear transition-all ml-4 ";
 styles.desktoplink =
-  "cursor-pointer px-4  dark:text-gray-300 relative font-bold tracking-[1px] capitalize hover:scale-105 transition-all duration-300 hover:text-primary before:content-['//'] before:italic before:px-2 before:text-primary  after:content-[''] after:bg-primary after:h-[3px] after:w-[0%] after:-bottom-[5px] after:left-3 after:rounded-md after:absolute after:duration-300 hover:after:w-[90%]";
+  "cursor-pointer px-4  relative font-bold tracking-[1px] capitalize hover:scale-105 transition-all duration-300 hover:text-primary before:content-['//'] before:italic before:px-2 before:text-primary  after:content-[''] after:bg-primary after:h-[3px]  after:w-[0%] after:-bottom-[5px] after:left-3 after:rounded-md after:absolute after:duration-300 hover:after:w-[90%]";
