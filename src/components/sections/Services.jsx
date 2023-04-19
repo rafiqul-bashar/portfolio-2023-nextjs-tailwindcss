@@ -8,7 +8,7 @@ const features = [
   {
     id: 1,
     title: "Web development",
-    desc: "I'm passionate about pixel-perfect implemented UX. I like to code things from scratch, and enjoy bringing ideas to life in the browser. I build things for the web , design and code beautifully simple things, and I love what I do.",
+    desc: "I'm passionate about pixel-perfect implemented UX. I like to code things from scratch and enjoy bringing ideas to life in the browser. I build things for the web , design and code beautifully simple things. I love what I do.",
   },
   {
     id: 3,
@@ -20,7 +20,7 @@ export default function Services() {
   return (
     <section
       id="services"
-      className="select-none py-12 md:py-20 fle flex-col-reverse items-center md:flex-row container mx-auto text-white"
+      className=" select-none py-12 md:py-20 flex flex-col-reverse items-center md:flex-row container mx-auto text-white"
     >
       <div className="grid grid-cols-1 md:grid-cols-3 ">
         {features.map((el) => (
@@ -29,7 +29,7 @@ export default function Services() {
             className={`p-8 ${
               el.id === 1
                 ? "bg-primary text-black scale-95 md:scale-105"
-                : "bg-[#303740] scale-95"
+                : "bg-[#303740] scale-90"
             }`}
           >
             <h2 className=" font-semibold text-2xl md:text-3xl capitalize">
@@ -38,7 +38,7 @@ export default function Services() {
               {el.title}
             </h2>
             <br />
-            <p className="capitalize tracking-tight">{el.desc}</p>
+            <p className=" tracking-tight">{el.desc}</p>
           </div>
         ))}
       </div>

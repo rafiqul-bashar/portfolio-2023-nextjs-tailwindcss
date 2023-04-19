@@ -6,9 +6,9 @@ export default function Landing() {
   const typewriter = useTypewriter({
     words: [
       "Web Developer",
-      "MERN Stack ",
-      "<ILOVETOCODE/>",
-      "React Developer",
+      "MERN STACK ",
+      "< ILOVETOCODE />",
+      "React JS | Express Js",
     ],
     loop: {},
     typeSpeed: 120,
@@ -28,7 +28,7 @@ export default function Landing() {
         <br />
         <span className="text-primary"> Rafiqul Bashar</span>
       </motion.h3>
-      <h2 className="text-xl md:text-4xl font-medium     tracking-wider mt-2 text-slate-400">
+      <h2 className="text-xl md:text-4xl font-medium tracking-wider mt-2 text-slate-400">
         {typewriter}
         <span className="cursor text-primary">|</span>
       </h2>
@@ -37,19 +37,22 @@ export default function Landing() {
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ duration: 0.6, delay: 0.5 }}
+        className="tracking-tight"
       >
-        I grew up in Noakhali, Chittagong, Bangladesh. After getting my hands
-        wet with Web Development I discovered my passion for it. I really enjoy
-        my time while coding. I love improving my self, I have been focusing on
-        React js, mainly redux and the context Api. I am also keen to learn
-        backend.
+        I'm a web developer with a passion for coding. I'm proficient in React
+        and have experience working with backend technologies such as Node.js,
+        Express.js, and MongoDB.
+        <br />
+        <br />
+        If you're looking to build a sleek website I'm ready to bring your
+        vision to life. Let's collaborate !
       </motion.p>
       <Link href="/#projects">
         <motion.button
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 0.6, delay: 0.6 }}
-          className="my-4 font-semibold bg-transparent px-4 py-3 text-xl hover:text-gray-900 relative border-2 hover:border-transparent  transition-colors duration-300 border-primary text-primary hover:bg-primary"
+          className="my-4 font-semibold bg-transparent px-4 py-2 text-lg rounded-sm hover:text-gray-900 relative border-2 hover:border-transparent  transition-colors duration-300 border-primary/60 text-gray-300 hover:bg-primary"
         >
           See My Works
         </motion.button>
