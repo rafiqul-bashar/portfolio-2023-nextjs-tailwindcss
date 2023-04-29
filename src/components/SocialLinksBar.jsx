@@ -1,13 +1,14 @@
 import React from "react";
-import { FaGithub, FaFacebook, FaLinkedin } from "react-icons/fa";
+import { FaGithub, FaLinkedin } from "react-icons/fa";
+import { AiOutlineMail } from "react-icons/ai";
 import { motion } from "framer-motion";
 export default function SocialLinksBar() {
   return (
-    <div className="flex  w-full flex-col items-center justify-center gap-4 text-gray-300 text-4xl rounded-full ">
+    <div className="flex  w-full md:flex-col items-center justify-center gap-4 text-gray-300 text-2xl  md:text-4xl rounded-full ">
       <motion.div
-        initial={{ x: -30, opacity: 0 }}
-        animate={{ x: 0, opacity: 1 }}
-        transition={{ delay: 0.7, duration: 0.2 }}
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ delay: 1.3 }}
         className={styles.link}
       >
         <a
@@ -23,27 +24,27 @@ export default function SocialLinksBar() {
       <motion.div
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
-        transition={{ delay: 0.8 }}
+        transition={{ delay: 1.1 }}
         className={styles.link}
       >
         <a
-          href="https://github.com/rafiqul-bashar"
+          href="mailto:rafiqul.bashar@outlook.com"
           target="_blank"
           rel="noreferrer"
         >
           <span className="w-10 h-10  bg-gray-800 hover:text-primary cursor-pointer hover:translate-y-2 transition-all duration-300">
-            <FaFacebook />
+            <AiOutlineMail />
           </span>
         </a>
       </motion.div>
       <motion.div
-        initial={{ x: 30, opacity: 0 }}
-        animate={{ x: 0, opacity: 1 }}
-        transition={{ delay: 0.7, duration: 0.2 }}
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ delay: 0.9 }}
         className={styles.link}
       >
         <a
-          href="https://github.com/rafiqul-bashar"
+          href="https://www.linkedin.com/in/rafiqul-bashar/"
           target="_blank"
           rel="noreferrer"
         >
@@ -54,10 +55,10 @@ export default function SocialLinksBar() {
       </motion.div>
       {/* bar line */}
       <motion.div
-        initial={{ y: 30, opacity: 0 }}
+        initial={{ y: 60, opacity: 0 }}
         animate={{ y: 0, opacity: 1 }}
-        transition={{ delay: 1, duration: 0.3 }}
-        className="w-[2px] h-[30vh]  bg-primary"
+        transition={{ delay: 0.9, duration: 0.2 }}
+        className="w-[3px] h-[35vh]  bg-primary hidden md:block"
       />
     </div>
   );

@@ -1,21 +1,14 @@
 import Link from "next/link";
-import React, { useEffect } from "react";
-import { RiBarChartLine } from "react-icons/ri";
+import React from "react";
 import { CgClose } from "react-icons/cg";
 import Image from "next/image";
 import { motion } from "framer-motion";
-const links = [
-  { url: "/", link: "home" },
-  { url: "/#about", link: "about" },
-  { url: "/#projects", link: "projects" },
-  { url: "/#contact", link: "contact" },
-];
 
 export default function Header({ menuOpen, switchMenu }) {
   return (
     <header className="select-none px-4 md:px-4  text-white  ">
       <div className="container flex  items-center justify-between  text-md  mx-auto h-[12vh]">
-        <Link href="/">
+        <Link href="/#/">
           <motion.div
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
@@ -23,11 +16,12 @@ export default function Header({ menuOpen, switchMenu }) {
             className="h-fit"
           >
             <Image
+              priority={true}
               width={120}
               height={120}
               src="/logo.png"
               alt="logo"
-              className="hover:scale-95  transition-all ease-out duration-200"
+              className="hover:scale-105   transition-all ease-in-out duration-300"
             />
           </motion.div>
         </Link>
@@ -65,25 +59,7 @@ export default function Header({ menuOpen, switchMenu }) {
           >
             <Link href="/#contact">Contact</Link>
           </motion.li>
-          {/* {links.map((el) => (
-            <li key={el.link} className={styles.desktoplink}>
-              <Link href={el.url}>
-                <span className="italic text-primary">{"/_ "}</span>
-                {el.link}
-              </Link>
-            </li>
-          ))} */}
         </ul>
-        <div className="items-center flex-shrink-0 hidden lg:flex">
-          <motion.button
-            initial={{ y: -10, opacity: 0 }}
-            animate={{ y: 0, opacity: 1 }}
-            transition={{ duration: 0.1, delay: 0.4 }}
-            className="self-center px-8 py-2 font-semibold rounded bg-primary text-gray-900 hover:scale-95 transition-all duration-150 ease-in-out"
-          >
-            Resume
-          </motion.button>
-        </div>
 
         {/*  Menu Icon Here */}
         <button
@@ -156,29 +132,6 @@ export default function Header({ menuOpen, switchMenu }) {
                   Contact
                 </Link>
               </motion.li>
-              {/* {links.map((el,i) => (
-                <motion.li
-                  initial={{ x: 10, opacity: 0 }}
-                  animate={{ x: 0, opacity: 1 }}
-                  transition={{ duration: 0.3, delay: 0.1 }}
-                  onClick={switchMenu}
-                  key={el.link}
-                  className={styles.mobilelink}
-                >
-                  <Link href={el.url}>
-                    <span className="italic text-primary">{"/_ "}</span>
-                    {el.link}
-                  </Link>
-                </motion.li>
-              ))} */}
-              <motion.button
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
-                transition={{ duration: 0.3, delay: 0.6 }}
-                className="self-center px-8 py-2 font-semibold rounded bg-primary text-gray-900 hover:scale-95 transition-all duration-150 ease-in-out"
-              >
-                Resume
-              </motion.button>
             </ul>
             <motion.div
               initial={{ opacity: 0 }}
@@ -186,7 +139,13 @@ export default function Header({ menuOpen, switchMenu }) {
               transition={{ duration: 0.3, delay: 0.7 }}
               className="flex items-center justify-center w-full absolute bottom-16"
             >
-              <Image width={120} height={120} src="/logo.png" alt="logo" />
+              <Image
+                priority={true}
+                width={120}
+                height={120}
+                src="/logo.png"
+                alt="logo"
+              />
             </motion.div>
             <motion.div
               initial={{ x: 10, opacity: 0 }}
@@ -211,4 +170,4 @@ let styles = {};
 styles.mobilelink =
   "cursor-pointer border-b-[2px] border-transparent  font-semibold tracking-wider hover:border-primary capitalize hover:text-primary ease-linear transition-all ml-4 ";
 styles.desktoplink =
-  "cursor-pointer px-4  relative font-bold tracking-[1px] capitalize hover:scale-105 transition-all duration-300 hover:text-primary before:content-['//'] before:italic before:px-2 before:text-primary  after:content-[''] after:bg-primary after:h-[3px]  after:w-[0%] after:-bottom-[5px] after:left-3 after:rounded-md after:absolute after:duration-300 hover:after:w-[90%]";
+  "cursor-pointer px-4  relative font-bold tracking-[1px] capitalize hover:scale-105 transition-all duration-300 ease-in-out hover:text-primary before:content-['//'] before:italic before:px-2 before:text-primary  after:content-[''] after:bg-primary after:h-[3px]  after:w-[0%] after:-bottom-[5px] after:left-3 after:rounded-md after:absolute after:duration-300 hover:after:w-[90%]";

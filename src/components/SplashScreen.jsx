@@ -12,8 +12,8 @@ export default function SplashScreen({ finishLoading }) {
       .add({
         targets: "#logo",
         scale: 1,
-        duration: 250,
-        // easing: "easeInOutExpo",
+        duration: 200,
+        easing: "easeInOutExpo",
       })
       .add({
         targets: "#logo",
@@ -28,19 +28,19 @@ export default function SplashScreen({ finishLoading }) {
       .add({
         targets: "#logo",
         delay: 100,
-        scale: 1.3,
+        scale: 1.1,
         duration: 400,
         easing: "spring(1, 80, 10, 0)",
         translateY: -10,
         rotate: "2turn",
         opacity: 1,
+      })
+      .add({
+        targets: "#logo",
+        scale: 1.3,
+        duration: 800,
+        easing: "easeOutInElastic(1, .6)",
       });
-    // .add({
-    //   targets: "#logo",
-    //   scale: 1.3,
-    //   duration: 300,
-    //   easing: "easeOutInElastic(1, .6)",
-    // });
   };
   React.useEffect(() => {
     const timeout = setTimeout(() => setLoaded("true"), 10);
@@ -53,7 +53,14 @@ export default function SplashScreen({ finishLoading }) {
       className="flex h-screen w-screen items-center justify-center "
       loaded={loaded}
     >
-      <Image id="logo" src="/logo.png" alt="logo" width={200} height={200} />
+      <Image
+        priority={true}
+        id="logo"
+        src="/logo.png"
+        alt="logo"
+        width={200}
+        height={200}
+      />
     </div>
   );
 }

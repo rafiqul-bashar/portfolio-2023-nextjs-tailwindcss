@@ -1,4 +1,6 @@
+import { projects } from "@/projectsData";
 import React from "react";
+import { ProjectShowcase } from "..";
 
 export default function Projects() {
   return (
@@ -6,7 +8,12 @@ export default function Projects() {
       id="projects"
       className="my-12 md:my-16  flex flex-col-reverse items-center md:flex-row container mx-auto text-white"
     >
-      <h2 className="text-center text-lg">Projects will be added soon</h2>
+      {" "}
+      <div className="p-4 space-y-8">
+        {projects?.map((el, i) => (
+          <ProjectShowcase key={i} project={el} />
+        ))}
+      </div>
     </section>
   );
 }
