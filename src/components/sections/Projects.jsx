@@ -1,4 +1,4 @@
-import { projects } from "@/projectsData";
+import { projects } from "../../projectsData";
 import React from "react";
 import { ProjectShowcase } from "..";
 
