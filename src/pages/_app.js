@@ -1,8 +1,8 @@
 "use client";
-import Header from "@/components/Header";
 import "@/styles/globals.css";
 import { useEffect, useState } from "react";
 import { usePathname } from "next/navigation";
+import Script from "next/script";
 import SplashScreen from "@/components/SplashScreen";
 export default function App({ Component, pageProps }) {
   const pathname = usePathname();
@@ -14,6 +14,7 @@ export default function App({ Component, pageProps }) {
 
   return (
     <>
+      <Script src="https://unpkg.com/validator@latest/validator.min.js" />
       {loading && isHome ? (
         <SplashScreen finishLoading={() => setLoading(false)} />
       ) : (

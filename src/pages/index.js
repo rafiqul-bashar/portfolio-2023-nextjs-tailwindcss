@@ -39,7 +39,9 @@ export default function Home() {
           <Services />
           <Projects />
           <Contact />
-          {/* <Footer /> */}
+          <footer className="md:hidden px-3 pb-8">
+            <SocialLinksBar />
+          </footer>
         </div>
       </main>
     </>
